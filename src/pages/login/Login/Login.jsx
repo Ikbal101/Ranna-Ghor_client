@@ -56,11 +56,11 @@ const Login = () => {
     console.log(location);
     const from = location.state?.from?.pathname || '/category/0';
 
-const handleLogIn =event =>{
+const handleLogIn =event => {
     event.preventDefault();
     const form = event.target;
-    const email =form.email.value ;
     const password =form .password.value ;
+    const email =form.email.value ;
     console.log(email,password);
 
     signIn(email,password)
@@ -76,7 +76,6 @@ const handleLogIn =event =>{
 
 
     return (
-
         <div>
 
         <Container className='w-25 mx-auto'>
@@ -96,7 +95,7 @@ const handleLogIn =event =>{
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
                 <Button variant="primary" type="submit">
-                    Login
+                  Login 
                 </Button> <br />
 
 
