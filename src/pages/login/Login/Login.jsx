@@ -117,7 +117,7 @@ const handleLogIn =event => {
         { user?
             <button onClick={handleSignOut}>Log Out</button>:
                 <>
-                    <button className='btn btn-warning' onClick={handleGoogleSignIn}>Google Login</button>
+                    <button className='btn btn-warning ' onClick={handleGoogleSignIn}>Google Login</button> <br />
                     <button className='btn btn-secondary' onClick={handleGItHUbSignIn}>GIthub login</button>
                 </>
             }

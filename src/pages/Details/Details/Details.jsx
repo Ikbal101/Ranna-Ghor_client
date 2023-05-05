@@ -5,11 +5,16 @@ import './Details.css';
 import { ToastContainer, toast } from 'react-toastify';
 
 const Details = () => {
-  const [disableButton, setDisableButton] = useState(false);
+  // const [disableButton, setDisableButton] = useState(false);
   
   const notify = () => toast("You added this recipe as your favourite recipe");
-  const notify1 = () => toast("You added this recipe as your favourite recipe");
-  const notify2 = () => toast("You added this recipe as your favourite recipe");
+  // const notify1 = () => toast("You added this recipe as your favourite recipe");
+  // const notify2 = () => toast("You added this recipe as your favourite recipe");
+
+  const showToastButton = (event) => {
+    notify();
+    event.target.disabled = true;
+  }
 
   const details = useLoaderData();
   console.log(details);
@@ -43,10 +48,10 @@ const Details = () => {
               <div> <span className='fw-bold'>How to cook:</span> {recipe.cookingMethod}</div>
             </Card.Body>
             <Card.Footer>
-              <Button className='btn btn-warning' onClick={() => {
-                setDisableButton(true);
-                notify();
-              }} disabled={disableButton}>Favourite</Button>
+              <Button className='btn btn-warning' 
+              onClick={
+                showToastButton
+              } >Favourite</Button>
             </Card.Footer>
           </Card>
           <Card className='border border-warning'>
@@ -59,10 +64,7 @@ const Details = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <button className='btn btn-warning' onClick={() => {
-                setDisableButton(true);
-                notify1();
-              }} disabled={disableButton}>Favourite</button>
+              <button className='btn btn-warning' onClick={showToastButton}  >Favourite</button>
             </Card.Footer>
           </Card>
           <Card className='border border-warning'>
@@ -75,10 +77,7 @@ const Details = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <Button className='btn btn-warning' onClick={() => {
-                setDisableButton(true);
-                notify2();
-              }} disabled={disableButton}>Favourite</Button>
+              <Button className='btn btn-warning' onClick={showToastButton}  >Favourite</Button>
             </Card.Footer>
           </Card>
         </CardGroup>
