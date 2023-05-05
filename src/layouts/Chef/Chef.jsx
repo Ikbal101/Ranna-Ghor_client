@@ -9,6 +9,7 @@ const Chef = ({ chef }) => {
   console.log(chef);
 
   return (
+
     <div className="chef-card">
       {
         <div className="chef-card-content">
@@ -18,12 +19,14 @@ const Chef = ({ chef }) => {
             </div>
             <Card.Body>
               <Card.Title></Card.Title>
+              
               <Card.Text>
                 <div>Name:{author.name}</div>
-                <div>Years of Experience: {experience}</div>
-                <div>Number of Recipes: {recipes}</div>
+                <div>Years of Experience : {experience}</div>
+                <div>Number of Recipes : {recipes}</div>
                 <div>Likes: {likes}</div>
               </Card.Text>
+
               <Button variant="primary"><Link to={`/news/details/${_id}`} style={{textDecoration:"none",color:"#fff",fontWeight:"500"}}>Viw Recipes</Link></Button>
             </Card.Body>
           </Card>
