@@ -5,7 +5,7 @@ const PopularRecipes = () => {
     return (
         <div className='mx-auto w-auto'>
         <div className='text-center mt-3'>
-          <h2 className='text-warning'>Our Special Recipes</h2>
+          <h2 className='text-warning'> Our Special Recipes</h2>
           <hr className='w-25 mx-auto' />
         </div>
         <Row xs={2} md={4} className="g-2">
@@ -15,7 +15,9 @@ const PopularRecipes = () => {
               <Card.Body>
                 <Card.Title>Pasta</Card.Title>
                 <Card.Text>
-                Pasta, when properly cooked, has a satisfyingly chewy texture that is both tender and firm. Its mild, nutty flavor complements a variety of sauces and ingredients, allowing for endless possibilities in taste.
+
+                Pasta, when properly cooked has a satisfyingly chewy texture that is both tender and firm. Its mild, nutty flavor complements a variety of sauces and ingredients, allowing for endless possibilities in taste.
+
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -68,9 +70,9 @@ const PopularRecipes = () => {
             <Card>
               <Card.Img className='img-fluid' variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStDu9f0tTEQhm1SvJ1lpTba_4Zf5r50mCO6O_6CR1u6EenNYX42K89l3VXeaSvY6U_KmY&usqp=CAU"  />
               <Card.Body>
-                <Card.Title>Omlet </Card.Title>
+                <Card.Title> Omlet </Card.Title>
                 <Card.Text>
-                Omlet, when properly cooked, has a satisfyingly chewy texture that is both tender and firm. Its mild, nutty flavor complements a variety of sauces and ingredients, allowing for endless possibilities in taste.
+                Omlet, when properly cooked has a satisfyingly chewy texture that is both tender and firm. Its mild, nutty flavor complements a variety of sauces and ingredients  allowing for endless possibilities in taste.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -81,6 +83,7 @@ const PopularRecipes = () => {
               <Card.Body>
                 <Card.Title>Omlet </Card.Title>
                 <Card.Text>
+
                 Omlet, when properly cooked, has a satisfyingly chewy texture that is both tender and firm. Its mild, nutty flavor complements a variety of sauces and ingredients, allowing for endless possibilities in taste.
                 </Card.Text>
               </Card.Body>
@@ -92,7 +95,7 @@ const PopularRecipes = () => {
               <Card.Body>
                 <Card.Title>Omlet </Card.Title>
                 <Card.Text>
-                Omlet, when properly cooked, has a satisfyingly chewy texture that is both tender and firm. Its mild, nutty flavor complements a variety of sauces and ingredients, allowing for endless possibilities in taste.
+                Omlet, when properly cooked, has a satisfyingly chewy texture that is both tender and firm . Its mild, nutty flavor complements a variety of sauces and ingredients, allowing for endless possibilities in taste.
                 </Card.Text>
               </Card.Body>
             </Card>
