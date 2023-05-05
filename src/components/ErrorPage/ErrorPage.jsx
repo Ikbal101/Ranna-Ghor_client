@@ -10,15 +10,18 @@ function ErrorPage() {
             id="error-page"
         >
             <div>
-                <h1>Oops!</h1>
+                <h1>Oops!... </h1>
                 <p>Sorry, 404 error has occurred.</p>
                 <p>
                     <i className="fw-bold fs-3">
+
                         {error.statusText || error.message}
+
                     </i>
                 </p>
             </div>
         </div>
+        
     );
 }
 
