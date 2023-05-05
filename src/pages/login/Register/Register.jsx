@@ -20,7 +20,7 @@ const Register = () => {
         const photo = form.photo.value;
         const password = form.password.value;
 
-        console.log(name, email, photo, password);
+        console.log(name,  photo, email, password);
         createUser(email, password)
             .then((result) => {
                 const createdUser = result.user;
@@ -66,8 +66,10 @@ const Register = () => {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control
+                     name="password"
+                     
                         type="password"
-                        name="password"
+                       
                         placeholder="Password"
                         required
                     />
@@ -81,6 +83,7 @@ const Register = () => {
                         label={
                             <>
                                 Accept{" "}
+
                                 <Link to="/terms">Terms and Condition</Link>
                             </>
                         }
@@ -91,16 +94,16 @@ const Register = () => {
                 </Button>
                 <br />
                 <Form.Text className="text-secondary">
-                    Already Have an Account?{" "}
+                    ALready Have an Account?{" "}
                     <Link
                         style={{ textDecoration: "none", color: "green" }}
                         to="/login"
                     >
-                        Login
+                        Login..
                     </Link>
                 </Form.Text>
-                <Form.Text className="text-success"></Form.Text>
-                <Form.Text className="text-danger"></Form.Text>
+                <Form.Text className="text-success"> </Form.Text>
+                <Form.Text className="text-danger"> </Form.Text>
             </Form>
         </Container>
     );
