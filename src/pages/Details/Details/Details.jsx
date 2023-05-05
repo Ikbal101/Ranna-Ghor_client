@@ -40,7 +40,7 @@ const Details = () => {
               <Card.Title>{recipe.name}</Card.Title>
               <Card.Text></Card.Text>
               <div><span className='fw-bold'>Ingredients:</span>{recipe.ingredients}</div>
-              <div>{recipe.cookingMethod}</div>
+              <div> <span className='fw-bold'>How to cook:</span> {recipe.cookingMethod}</div>
             </Card.Body>
             <Card.Footer>
               <Button className='btn btn-warning' onClick={() => {
@@ -55,7 +55,7 @@ const Details = () => {
               <Card.Title>{recipe.name1}</Card.Title>
               <Card.Text>
                 <div><span className='fw-bold'>Ingredients:</span>{recipe.ingredients}</div>
-                <div>....{recipe.cookingMethod}</div>
+                <div> <span className='fw-bold'>How to cook:</span> {recipe.cookingMethod}</div>
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -71,7 +71,7 @@ const Details = () => {
               <Card.Title>{recipe.name2}</Card.Title>
               <Card.Text>
                 <div><span className='fw-bold'>Ingredients:</span>{recipe.ingredients}</div>
-                <div>{recipe.cookingMethod}</div>
+                <div> <span className='fw-bold'>How to cook:</span> {recipe.cookingMethod}</div>
               </Card.Text>
             </Card.Body>
             <Card.Footer>

@@ -113,12 +113,12 @@ const handleLogIn =event => {
             </Form>
         </Container>
 
-        <div>
+        <div className='text-center mt-4'>
         { user?
             <button onClick={handleSignOut}>Log Out</button>:
                 <>
-                    <button onClick={handleGoogleSignIn}>Google Login</button>
-                    <button onClick={handleGItHUbSignIn}>GIthub login</button>
+                    <button className='btn btn-warning' onClick={handleGoogleSignIn}>Google Login</button>
+                    <button className='btn btn-secondary' onClick={handleGItHUbSignIn}>GIthub login</button>
                 </>
             }
            
