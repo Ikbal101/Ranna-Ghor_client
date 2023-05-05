@@ -7,12 +7,17 @@ const Body = () => {
             <div>
             <section id="banner-section">
                 <div className="banner-contents">
-                    <h1>Ranna Ghor Hotel and Restaurant </h1>
+
+                    <h1> Ranna Ghor Hotel  and  Restaurant </h1>
+
                     <p>20% discounts for Take away</p>
-                    <button className="btn1" id="orderButton">Order Now</button>
+                    <button className="btn1" id="orderButton">
+                        Order Now..
+                        
+                        </button>
                 </div>
             </section>
-           <PopularRecipes></PopularRecipes>
+           <PopularRecipes> </PopularRecipes>
             </div>
         </div>
     );
