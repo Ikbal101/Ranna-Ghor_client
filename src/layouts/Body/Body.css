@@ -1,0 +1,54 @@
+#banner-section {
+    background-image: url("https://cdn.vox-cdn.com/thumbor/W2Ax5vP9ftL0ETtA_QIfdxX19ow=/0x1000:6000x4000/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/23545164/Coronado.Serea.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.banner-contents {
+    padding: 50px 10px;
+    text-align: center;
+}
+.banner-contents h1 {
+    width: 100%;
+    margin: 15px auto;
+    font-size: 3rem;
+    background: rgba(255, 255, 0, 0.884);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Handlee', cursive;
+}
+.banner-contents p {
+    width: 300px;
+    margin: 15px auto;
+    background: rgba(108, 179, 22, 0.488);
+    padding: 10px;
+    font-size: 1.5rem;
+    color: white;
+}
+.btn1 {
+    width: 160px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    background: rgb(0, 128, 0);
+    color: white;
+    text-transform: uppercase;
+    transition: .4s;
+}
+.btn1:hover {
+    transform: scale(1.2);
+    background-color: transparent;
+    color: rgb(51, 1, 1);
+    font-weight: 500;
+}
+
+.food-container{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.foods img{
+    width: 300px;
+    height: 250px;
+}

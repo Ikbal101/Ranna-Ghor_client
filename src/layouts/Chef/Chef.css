@@ -1,0 +1,26 @@
+.chef-card {
+   
+    margin: 10px;
+}
+
+
+.ourChef{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 10px;
+}
+
+.imges{
+    width:100%;
+}
+
+@media screen and (max-width: 800px) {
+
+    img{
+        width: 100%;
+    }
+    .ourChef{
+        grid-template-columns: 1fr;
+        margin: 10px;
+    }
+}

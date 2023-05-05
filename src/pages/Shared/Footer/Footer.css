@@ -1,0 +1,21 @@
+#contact-section {
+    padding: 1%;
+    background: #595b83;
+}
+.contact-details {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+.map {
+    width: 100%;
+    height: 250px;
+}
+.contact-details p,
+address {
+    font-size: 0.8rem;
+}
+
+@media (min-width: 576px) {
+
+}
