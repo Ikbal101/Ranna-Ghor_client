@@ -26,10 +26,10 @@ const Details = () => {
       <Card className='card-set mx-auto'>
         <Card.Img variant="top" src={picture} className='image-set' />
         <Card.Body>
-          <Card.Title>{author.name}</Card.Title>
-          <p>{likes}</p>
-          <p>{recipes}</p>
-          <p>{experience} Years</p>
+          <Card.Title> <span className='card-title'>Name:</span>{author.name}</Card.Title>
+          <p><span className='card-title'>Likes:</span> {likes}</p>
+          <p> <span className='card-title'>Recipes:</span>{recipes}</p>
+          <p><span className='card-title'>Experience:</span>{experience} Years</p>
           <Card.Text>
             {description}
           </Card.Text>
@@ -37,7 +37,8 @@ const Details = () => {
       </Card>
 
       <div className='mt-5'>
-        <h2 className='text-warning text-center mb-4'>Recipe section</h2>
+        <h2 className='text-warning text-center mb-4'>---Recipe section---</h2>
+        <hr className='hr' />
         <CardGroup className='gap-4 '>
           <Card className='border border-warning' >
             <Card.Img variant="top" src={recipesImg} className="recipes-img" />
@@ -48,7 +49,7 @@ const Details = () => {
               <div> <span className='fw-bold'>How to cook:</span> {recipe.cookingMethod}</div>
             </Card.Body>
             <Card.Footer>
-              <Button className='btn btn-warning' 
+              <Button className='btn btn-warning text-bold' 
               onClick={
                 showToastButton
               } >Favourite</Button>
@@ -64,7 +65,7 @@ const Details = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <button className='btn btn-warning' onClick={showToastButton}  >Favourite</button>
+              <button className='btn btn-warning text-bold' onClick={showToastButton}  >Favourite</button>
             </Card.Footer>
           </Card>
           <Card className='border border-warning'>
@@ -77,7 +78,7 @@ const Details = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <Button className='btn btn-warning' onClick={showToastButton}  >Favourite</Button>
+              <Button className='btn btn-warning text-bold' onClick={showToastButton}  >Favourite</Button>
             </Card.Footer>
           </Card>
         </CardGroup>

@@ -21,10 +21,10 @@ const Chef = ({ chef }) => {
               <Card.Title></Card.Title>
               
               <Card.Text>
-                <div>Name:{author.name}</div>
-                <div>Years of Experience : {experience}</div>
-                <div>Number of Recipes : {recipes}</div>
-                <div>Likes: {likes}</div>
+                <div><span className="text-bold ">Name:</span> <span className="text-success"></span>{author.name}</div>
+                <div> <span className="text-bold "> Years of Experience : </span><span className="text-secondary">{experience}</span></div>
+                <div><span className="text-bold "> Number of Recipes :</span> <span className="text-warning">{recipes}</span></div>
+                <div> <span className="text-bold ">Likes: </span><span className="text-primary">{likes}</span></div>
               </Card.Text>
 
               <Button variant="primary"><Link to={`/news/details/${_id}`} style={{textDecoration:"none",color:"#fff",fontWeight:"500"}}>Viw Recipes</Link></Button>

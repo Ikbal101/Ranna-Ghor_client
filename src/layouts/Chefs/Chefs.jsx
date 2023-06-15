@@ -11,7 +11,7 @@ const Chefs = () => {
   // const [chefs, setChefs] = useState([]);
 
   // useEffect(() => {
-  //     fetch("http://localhost:5000/categories")
+  //     fetch(" https://b7a10-chef-recipe-hunter-server-side-webabdulla.vercel.app/categories")
   //         .then((res) => res.json())
   //         .then((data) => setChefs(data))
   //         .catch((error) => console.log(error));
@@ -29,7 +29,8 @@ const Chefs = () => {
 
   return (
     <div>
-      <h2 className="mt-5 mb-5 text-center">Our Special chefs:{chefNews.length}</h2>
+      <h2 className="mt-5  text-center text-warning">---Our Special chefs: {chefNews.length} ---</h2>
+      <hr className='w-25  mx-auto' />
       <div className="ourChef">
         {chefNews.map((chef) => (
           <Chef key={chef._id} chef={chef}></Chef>

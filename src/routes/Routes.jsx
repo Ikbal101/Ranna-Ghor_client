@@ -44,7 +44,7 @@ const router = createBrowserRouter([
                 path: ":id",
                 element: <Chefs></Chefs>,
                 loader: ({ params }) =>
-                    fetch(`http://localhost:5000/categories/${params.id}`),
+                    fetch(` https://b7a10-chef-recipe-hunter-server-side-webabdulla.vercel.app/categories/${params.id}`),
             },
         ],
     },
@@ -66,7 +66,7 @@ const router = createBrowserRouter([
                 path: 'details/:id',
                 element: <PrivateRoute> <Details></Details></PrivateRoute>,
                 loader: async ({params}) => {
-                    const response = await fetch(`http://localhost:5000/chefDetails/${params.id}`);
+                    const response = await fetch(` https://b7a10-chef-recipe-hunter-server-side-webabdulla.vercel.app/chefDetails/${params.id}`);
                     const data = await response.json();
                     console.log(data);
                     return data;
@@ -81,7 +81,7 @@ const router = createBrowserRouter([
     //         {
     //             path: 'details/:id',
     //             element:<PrivateRoute> <Details></Details></PrivateRoute>,
-    //             loader: ({params}) => fetch(`http://localhost:5000/chefDetails/${params.id}`)
+    //             loader: ({params}) => fetch(` https://b7a10-chef-recipe-hunter-server-side-webabdulla.vercel.app/chefDetails/${params.id}`)
     //         }
     //     ]
     // },

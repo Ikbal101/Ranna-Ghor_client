@@ -5,8 +5,8 @@ const PopularRecipes = () => {
     return (
         <div className='mx-auto w-auto'>
         <div className='text-center mt-3'>
-          <h2 className='text-warning'> Our Special Recipes</h2>
-          <hr className='w-25 mx-auto' />
+          <h2 className='text-warning'> ---Our Special Recipes---</h2>
+          <hr className='w-25 h-1 mx-auto' />
         </div>
         <Row xs={2} md={4} className="g-2">
           <Col>
@@ -81,10 +81,10 @@ const PopularRecipes = () => {
             <Card>
               <Card.Img className='img-fluid' variant="top" src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg"  />
               <Card.Body>
-                <Card.Title>Omlet </Card.Title>
+                <Card.Title>Chiken Roast </Card.Title>
                 <Card.Text>
 
-                Omlet, when properly cooked, has a satisfyingly chewy texture that is both tender and firm. Its mild, nutty flavor complements a variety of sauces and ingredients, allowing for endless possibilities in taste.
+                When perfectly prepared, chicken roast boasts a delightful chewiness, offering tenderness and firmness in each bite. Its  nutty taste harmonizes flawlessly with numerous condiments and  granting boundless culinary options.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -93,9 +93,9 @@ const PopularRecipes = () => {
             <Card>
               <Card.Img className='img-fluid' variant="top" src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?cs=srgb&dl=pexels-ella-olsson-1640772.jpg&fm=jpg"  />
               <Card.Body>
-                <Card.Title>Omlet </Card.Title>
+                <Card.Title>Beef Salad</Card.Title>
                 <Card.Text>
-                Omlet, when properly cooked, has a satisfyingly chewy texture that is both tender and firm . Its mild, nutty flavor complements a variety of sauces and ingredients, allowing for endless possibilities in taste.
+                Beef salad is a refreshing dish that combines tender, grilled beef slices with crisp vegetables and tangy dressing. The juicy meat pairs perfectly with the crunchy greens, creating a flavorful and satisfying salad option.
                 </Card.Text>
               </Card.Body>
             </Card>

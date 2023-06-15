@@ -7,3 +7,15 @@
 .recipes-img{
     height: 250px;
 }
+
+.text-bold{
+    font-weight: bold;
+}
+
+.hr{
+    width: 25%;
+    height: 3px;
+    margin: 0 auto;
+    margin-top: -4px;
+    margin-bottom: 10px;
+}

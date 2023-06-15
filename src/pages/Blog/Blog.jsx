@@ -6,7 +6,7 @@ const Blog = () => {
         <div className='bg-dark'>
             <NavigationBar></NavigationBar>
             <div className='container'>
-              <h2 className='mt-4 mb-4 text-white' >Some Question and Their Answer</h2>
+              <h2 className='mt-4 mb-4 text-warning text-center' >Some Question and Their Answer</h2>
       <h3 className='text-danger'>
         1. Tell us the differences between uncontrolled and controlled
         components ?{" "}
@@ -23,7 +23,7 @@ const Blog = () => {
       </p>
 
       <h3 className='text-danger'>2. How to validate React props using PropTypes</h3>
-      <p className='text-success'>
+      <p className='text-white'>
         <strong>Answer : </strong> Define the types and requirements of each
         prop in the propTypes object. PropTypes provides a range of type
         validators, including string, number, boolean, object, array, and more.
@@ -51,7 +51,7 @@ const Blog = () => {
         {" "}
         4 .What is a custom hook, and why will you create a custom hook?
       </h3>
-      <p className='text-success'>
+      <p className='text-white'>
       <strong>Answer : </strong>
         In React, a custom hook is a reusable function that encapsulates
         stateful logic and can be shared between components. Custom hooks allow

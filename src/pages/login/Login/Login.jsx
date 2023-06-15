@@ -3,82 +3,87 @@ import { useContext } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import Swal from 'sweetalert2';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup, signOut } from "firebase/auth";
 import app from '../../../firebase/firebase.config';
 
-
-
 const Login = () => {
-    const [user,SetUser]=useState();
-    const auth = getAuth(app);
-    const googleProvider = new GoogleAuthProvider();
-    const gitHubProvider = new GithubAuthProvider();
+  const [user, setUser] = useState();
+  const auth = getAuth(app);
+  const googleProvider = new GoogleAuthProvider();
+  const gitHubProvider = new GithubAuthProvider();
 
-    const handleGoogleSignIn =()=>{
-        signInWithPopup(auth,googleProvider)
-        .then(result =>{
-            const loggedInUser =result.user
-            console.log(loggedInUser);
-            SetUser(loggedInUser)
-        })
-        .catch(error =>{
-            console.log('error',error.message)
-        })
-    }
-    const handleSignOut = ( )=>{
-        signOut(auth)
-        .then(result =>{
-            SetUser(null)
-            console.log(result);
-        })
-        .catch(error =>{
-            console.log(error);
-        })
-    }
-    const handleGItHUbSignIn = () =>{
-        signInWithPopup(auth,gitHubProvider)
-        .then(result =>{
-            const loggedInUser =result.user
-            console.log("this is git",loggedInUser);
-            SetUser(loggedInUser)
+  const handleGoogleSignIn = () => {
+    signInWithPopup(auth, googleProvider)
+      .then(result => {
+        const loggedInUser = result.user
+        console.log(loggedInUser);
+        setUser(loggedInUser)
+      })
+      .catch(error => {
+        console.log('error', error.message)
+      })
+  }
 
-        })
-        .catch(error =>{
-            console.log('github error',error.message)
-        })  
-    }
+  const handleSignOut = () => {
+    signOut(auth)
+      .then(result => {
+        setUser(null)
+        console.log(result);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }
+
+  const handleGItHUbSignIn = () => {
+    signInWithPopup(auth, gitHubProvider)
+      .then(result => {
+        const loggedInUser = result.user
+        console.log("this is git", loggedInUser);
+        setUser(loggedInUser)
+
+      })
+      .catch(error => {
+        console.log('github error', error.message)
+      })
+  }
 
 
-    const {signIn}=useContext(AuthContext);
-    const navigate = useNavigate();
-    const location = useLocation();
-    console.log(location);
-    const from = location.state?.from?.pathname || '/category/0';
+  const { signIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
+  const from = location.state?.from?.pathname || '/category/0';
 
-const handleLogIn =event => {
+  const handleLogIn = event => {
     event.preventDefault();
     const form = event.target;
-    const password =form .password.value ;
-    const email =form.email.value ;
-    console.log(email,password);
+    const password = form.password.value;
+    const email = form.email.value;
+    console.log(email, password);
 
-    signIn(email,password)
-        .then(result =>{
-            const loggedUser = result.user;
-            console.log(loggedUser);
-            navigate(from,{replace:true})
-        })
-        .catch(error =>{
-            console.log(error);
-        })
-    }
+    signIn(email, password)
+      .then(result => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        Swal.fire({
+          icon: 'success',
+          title: 'Login Successful!',
+          text: 'You have successfully logged in.',
+        }).then(() => {
+          navigate(from, { replace: true });
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
 
-
-    return (
-        <div>
-
-        <Container className='w-25 mx-auto'>
+  return (
+    <div>
+      <Container className='w-25 mx-auto'>
             <h3>Please Login</h3>
             <Form onSubmit={handleLogIn}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -114,20 +119,16 @@ const handleLogIn =event => {
         </Container>
 
         <div className='text-center mt-4'>
-        { user?
-            <button onClick={handleSignOut}>Log Out</button>:
-                <>
-                    <button className='btn btn-warning ' onClick={handleGoogleSignIn}>Google Login</button> <br />
-                    <button className='btn btn-secondary' onClick={handleGItHUbSignIn}>GIthub login</button>
-                </>
-            }
-           
-        </div>
-      
-        </div>
-
-        
-    );
-    };
+        {user ?
+          <button onClick={handleSignOut}>Log Out</button> :
+          <>
+            <button className='btn btn-warning' onClick={handleGoogleSignIn}>Google Login</button> <br />
+            <button className='btn btn-secondary' onClick={handleGItHUbSignIn}>GIthub login</button>
+          </>
+        }
+      </div>
+    </div>
+  );
+};
 
 export default Login;

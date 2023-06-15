@@ -2,40 +2,48 @@ import React, { useContext, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
-    const [accepted, setAccepted] = useState(false);
-    const navigate = useNavigate();
+  const { createUser } = useContext(AuthContext);
+  const [accepted, setAccepted] = useState(false);
+  const navigate = useNavigate();
 
-    const handleAccepted = (event) => {
-        setAccepted(event.target.checked);
-    };
+  const handleAccepted = (event) => {
+    setAccepted(event.target.checked);
+  };
 
-    const handleRegister = (event) => {
-        event.preventDefault();
-        const form = event.target;
-        const name = form.name.value;
-        const email = form.email.value;
-        const photo = form.photo.value;
-        const password = form.password.value;
+  const handleRegister = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const photo = form.photo.value;
+    const password = form.password.value;
 
-        console.log(name,  photo, email, password);
-        createUser(email, password)
-            .then((result) => {
-                const createdUser = result.user;
-                console.log(createdUser);
-                navigate("/");
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    };
-    return (
-        <Container className="w-25 mx-auto">
-            <h3>Please Register</h3>
-            <Form onSubmit={handleRegister}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+    console.log(name, photo, email, password);
+    createUser(email, password)
+      .then((result) => {
+        const createdUser = result.user;
+        console.log(createdUser);
+        Swal.fire({
+          icon: "success",
+          title: "Registration Successful!",
+          text: "You have successfully registered.",
+        }).then(() => {
+          navigate("/");
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  return (
+    <Container className="w-25 mx-auto">
+      <h3>Please Register</h3>
+      <Form onSubmit={handleRegister}>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
                     <Form.Control
                         type="text"
@@ -89,10 +97,10 @@ const Register = () => {
                         }
                     />
                 </Form.Group>
-                <Button variant="primary" type="submit" disabled={!accepted}>
-                    Register
-                </Button>
-                <br />
+        <Button variant="primary" type="submit" disabled={!accepted}>
+          Register
+        </Button>
+        <br />
                 <Form.Text className="text-secondary">
                     ALready Have an Account?{" "}
                     <Link
@@ -104,9 +112,9 @@ const Register = () => {
                 </Form.Text>
                 <Form.Text className="text-success"> </Form.Text>
                 <Form.Text className="text-danger"> </Form.Text>
-            </Form>
-        </Container>
-    );
+      </Form>
+    </Container>
+  );
 };
 
 export default Register;
