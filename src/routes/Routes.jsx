@@ -10,13 +10,13 @@ import About from "../pages/About/About";
 import Blog from "../pages/Blog/Blog";
 import Chefs from "../layouts/Chefs/Chefs"
 import Details from "../pages/Details/Details/Details";
-import ErrorPage from "../components/ErrorPage/ErrorPage";
+import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <LoginLayout></LoginLayout>,
-        errorElement:<ErrorPage/>,
+        errorElement:<NotFoundPage></NotFoundPage>,
         children: [
             {
                 path: "/",
